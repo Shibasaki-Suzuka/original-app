@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 100px 0px 30px;
+  background-color: #CCFFFF;
+}
+
+.dreamnote-logo {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 100px; 
+}
+
+.header-menues {
+  height: 100px;
+  display: flex;
+}
+
+.header-menu {
+  margin-left: 70px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 100px;  
+  text-decoration: none;
+  color: #000000;
+}

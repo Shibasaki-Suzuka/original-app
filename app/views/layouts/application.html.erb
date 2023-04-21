@@ -9,6 +9,18 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header class="header">
+    <div class="dream-logo">
+      <%= link_to image_tag("dreamnote-logo.png", class:"dreamnote-icon"), "/" %>
+    </div>
+    <div class="navbar">
+      <ul class="header-menues">
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header-menu" %></li>
+        <li><%= link_to "ログイン", new_user_session_path, class: "header-menu" %></li>
+        <li><%= link_to "新規登録", new_user_registration_path, class: "header-menu" %></li>
+      </ul>
+    </div>
+  </header>
   <body>
     <%= yield %>
   </body>
