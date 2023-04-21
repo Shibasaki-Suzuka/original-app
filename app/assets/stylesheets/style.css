@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -6,10 +10,9 @@
   background-color: #CCFFFF;
 }
 
-.dreamnote-logo {
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 100px; 
+.dreamnote-icon {
+  width: 18vw;
+  margin-right: 18vw;
 }
 
 .header-menues {
@@ -23,5 +26,5 @@
   font-weight: 600;
   line-height: 100px;  
   text-decoration: none;
-  color: #000000;
+  color: #8B4513;
 }

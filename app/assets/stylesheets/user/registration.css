@@ -7,6 +7,11 @@
   justify-content: center;
 }
 
+.form-wrap {
+  width: 50%;
+  background-color: white;
+  padding-bottom: 70px;
+}
 
 .form-header {
   width: 100%;
