@@ -4,6 +4,13 @@ class DreamsController < ApplicationController
   def index
   end
 
+  def new
+    @dream = Dream.new
+  end
+
+  def create
+  end
+
   private
   def move_to_index
     unless user_signed_in?
