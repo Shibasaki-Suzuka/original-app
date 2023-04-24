@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 100px 0px 30px;
+  background: url(assets/header-image.png) repeat center/cover ;
+}
+
+.dreamnote-icon {
+  width: 13vw;
+  margin-right: 13vw;
+}
+
+.header-menues {
+  height: 100px;
+  display: flex;
+}
+
+.header-menu {
+  margin-left: 70px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 100px;  
+  text-decoration: none;
+  color: #8B4513;
+}
