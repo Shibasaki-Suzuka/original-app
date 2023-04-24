@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+}
+
+.main-space {
+  width: 70%;
+  height: 100%;
+}
+
+.main-user {
+  height: 200px;
+  background-color: gray;
+}
+
+.user-nickname {
+  background-color: bisque;
+  text-decoration: none;
+  font-size: 30px;
+  padding-left: 30px;
+  position: relative;
+  top: 80px
+}
+
+.dream-list {
+  background-color: pink;
+  width: 70vh;
+}
+
+.dream-list-main {
+  background-color: palevioletred;
+  padding: 10px;
+  margin: 20px;
+}
+
+/* ---friend list---- */
+.main-light {
+  background-color: beige;
+  width: 30%;
+
+}

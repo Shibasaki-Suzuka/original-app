@@ -7,12 +7,12 @@
   justify-content: space-between;
   width: 100%;
   padding: 0px 100px 0px 30px;
-  background-color: #CCFFFF;
+  background: url(assets/header-image.png) repeat center/cover ;
 }
 
 .dreamnote-icon {
-  width: 18vw;
-  margin-right: 18vw;
+  width: 13vw;
+  margin-right: 13vw;
 }
 
 .header-menues {

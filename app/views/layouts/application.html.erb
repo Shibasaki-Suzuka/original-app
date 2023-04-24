@@ -11,21 +11,24 @@
   </head>
 
   <header class="header">
-    <div class="dreamnote-logo">
-      <%= link_to image_tag("dreamnote-logo.png", class:"dreamnote-icon"), "/" %>
-    </div>
-    <div class="navbar">
-    <% if user_signed_in? %>
-      <div class="header-menues">
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header-menu" %>
+    <%# <div class="header-hero"> %>
+      <%# <img class="header-image" src="images/header-image.png"> %>
+      <div class="dreamnote-logo">
+        <%= link_to image_tag("dreamnote-logo.png", class:"dreamnote-icon"), "/" %>
       </div>
-    <% else %>
       <div class="navbar">
-        <%= link_to "ログイン", new_user_session_path, class: "header-menu" %>
-        <%= link_to "新規登録", new_user_registration_path, class: "header-menu" %>
+      <% if user_signed_in? %>
+        <div class="header-menues">
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header-menu" %>
+        </div>
+      <% else %>
+        <div class="navbar">
+          <%= link_to "ログイン", new_user_session_path, class: "header-menu" %>
+          <%= link_to "新規登録", new_user_registration_path, class: "header-menu" %>
+        </div>
+      <% end %>
       </div>
-    <% end %>
-    </div>
+    <%# </div> %>
   </header>
   <body>
     <%= yield %>
