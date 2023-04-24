@@ -26,14 +26,25 @@
 | cost          | integer         |                               |
 | due           | date            |                               |
 | memo          | text            |                               |
-| comment       | text            |                               |
-| success_day   | date            | null: false                   |
 | user          | references      | null: false, foreign_key: true|
 
 ### Association
 
 * belongs_to :user
 * belongs_to :favorite
+* has_many   :achieves 
+
+## achieves table
+
+| Column        | Type            | Options                       |
+|---------------|-----------------|-------------------------------|
+| comment       | text            |                               |
+| success_day   | date            | null: false                   |
+| dream         | references      | null: false, foreign_key: true|
+
+### Association
+
+* belongs_to :dream
 
 ## favorites table
 

@@ -11,4 +11,6 @@ class User < ApplicationRecord
     validates :first_name_hiragana, format: { with: /\A[ぁ-んー－]+\z/, message: 'はひらがなで入力して下さい。' }
     validates :birthday
   end
+
+  has_many :dreams
 end
