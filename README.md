@@ -24,7 +24,7 @@
 |---------------|-----------------|-------------------------------|
 | dream_list    | string          | null: false                   |
 | cost          | integer         |                               |
-| due           | date            |                               |
+| due           | string          |                               |
 | memo          | text            |                               |
 | user          | references      | null: false, foreign_key: true|
 

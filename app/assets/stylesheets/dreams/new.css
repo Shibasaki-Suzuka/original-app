@@ -1,0 +1,78 @@
+
+.dreams {
+  height: 100%;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.dreams-main {
+  background-color: antiquewhite;
+  padding: 20px;
+  width: 80%;
+}
+
+.point-message {
+  background-color: aquamarine;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dream-table {
+  background-color: pink;
+  width: 100%;
+}
+
+.dream_content {
+  background-color: palevioletred;
+}
+
+.item {
+  padding-right: 20px;
+}
+
+.dream-item {
+  width: 40%;
+}
+
+.memo-item {
+  width: 30%;
+}
+
+.dream-input-default{
+  width: 95%;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+/* -------保存ボタン------- */
+
+.purchase-btn {
+  width: 120px;
+  background: #3ccace;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.purchase-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.purchase-btn-icon {
+  width: 60%;
+}

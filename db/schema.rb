@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2023_04_24_103443) do
   create_table "dreams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "dream_list", null: false
     t.integer "cost"
-    t.date "due"
+    t.string "due"
     t.text "memo"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
