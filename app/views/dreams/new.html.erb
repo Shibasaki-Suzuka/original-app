@@ -1,4 +1,5 @@
-<%= form_with model: @dream, url: new_dream_path, class: 'hoge', local: true do |f| %>
+<%= form_with model: @dream, url: dreams_path, class: 'hoge', local: true do |f| %>
+<%# <%= render 'shared/error_messages', model: f.object %>
 <div class="dreams">
   <div class="dreams-main">
     <p class="point-message">
@@ -15,18 +16,22 @@
         </tr>
       </thead>
       <tbody class="">
-        <% 100.times do |index| %>
-          <tr class="">
-            <td><%= index + 1 %></td>
-            <td><%= f.text_area :dream_list, class:"dream-input-default" %></td>
-            <td><%= f.text_area :cost, class:"dream-input-default" %></td>
-            <td><%= f.text_area :due, class:"dream-input-default" %></td>
-            <td><%= f.text_area :memo, class:"dream-input-default" %></td>
-          </tr>
-        <% end %>
+        <tr class="">
+          <td><%= @dream.id %></td>
+          <td><%= f.text_area :dream_list, class:"dream-input-default" %></td>
+          <td><%= f.text_area :cost, class:"dream-input-default" %></td>
+          <td><%= f.text_area :due, class:"dream-input-default" %></td>
+          <td><%= f.text_area :memo, class:"dream-input-default" %></td>
+        </tr>
       </tbody>
     </table>
   </div>
+  <div class="save-btn">
+    <%= f.submit "保存する" ,class:"sell-btn" %>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
 </div>
 <% end %>
+
+<%= render "shared/footer" %>
 
