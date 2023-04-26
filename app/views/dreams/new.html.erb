@@ -15,8 +15,8 @@
           <th class="memo-item">調べたこと</th>
         </tr>
       </thead>
-      <tbody class="">
-        <tr class="">
+      <tbody class="dream-tbody">
+        <tr class="dream-text">
           <td><%= @dream.id %></td>
           <td><%= f.text_area :dream_list, class:"dream-input-default" %></td>
           <td><%= f.text_area :cost, class:"dream-input-default" %></td>
@@ -28,10 +28,9 @@
   </div>
   <div class="save-btn">
     <%= f.submit "保存する" ,class:"sell-btn" %>
-    <%=link_to 'もどる', root_path, class:"back-btn" %>
+    <%= link_to 'もどる', root_path, class:"back-btn" %>
   </div>
 </div>
 <% end %>
 
-<%= render "shared/footer" %>
 

@@ -1,14 +1,15 @@
 .registration-main {
   width: 100%;
   min-width: 800px;
-  height: 100%;
-  background-color: #f5f5f5;
+  height: 100vh;
+  background: url(assets/background2.png) repeat center/cover ;
   display: flex;
   justify-content: center;
 }
 
 .form-wrap {
   width: 50%;
+  height: 500px;
   background-color: white;
   padding-bottom: 70px;
 }

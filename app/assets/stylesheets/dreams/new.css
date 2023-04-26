@@ -1,7 +1,8 @@
 
 .dreams {
+  width: 100%;
   height: 100%;
-  background-color: blue;
+  background: url(assets/background2.png) repeat center/cover ;
   display: flex;
   padding: 30px 0;
   flex-direction: column;
@@ -16,7 +17,6 @@
 }
 
 .point-message {
-  background-color: aquamarine;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -28,7 +28,11 @@
 
 .dream_content {
   background-color: palevioletred;
-  height: 50px;
+  height: 30px;
+}
+
+.dream__contents {
+  font-size: 15px;
 }
 
 .item {
