@@ -1,4 +1,6 @@
+
 <%= form_with model: @dream, url: dream_path, class: 'dream-edit-page', local: true do |f| %>
+
 
 <div class="dreams">
   <div class="dreams-main">
@@ -27,7 +29,9 @@
     </table>
   </div>
   <div class="save-btn">
+
     <%= f.submit "保存する" ,class:"storage-btn" %>
+
     <%= link_to 'もどる', root_path, class:"back-btn" %>
   </div>
 </div>
