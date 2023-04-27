@@ -1,1 +1,29 @@
-叶えた
+<%= form_with model: @achieve, url: dreams_path, class: 'new-achieve-form', local: true do |f| %>
+<div class="dreams">
+  <div class="dreams-main">
+    <p class="point-message">
+      ★Point！達成の想い出に写真とコメントをのこしましょう！
+    </p>
+    <div class="dream-achieve-form">
+      <div class="dream-contents">
+        <div class="dream-text">
+          <%= @dream.dream_list %>
+        </div>
+      </div>
+      <div class="dream-text">
+        <%= f.text_area :comment, placeholder: "日付", class:"dream-input-default" %>
+      </div>
+      <div class="dream-text">
+        <%= f.text_area :comment, placeholder: "コメントする", class:"dream-input-default" %>
+      </div>
+        
+      <div class="save-btn">
+        <%= f.submit "保存する" ,class:"storage-btn" %>
+        <%= link_to 'もどる',  dream_path(@dream.id), class:"back-btn" %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
+
