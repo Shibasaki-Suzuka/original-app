@@ -1,14 +1,16 @@
 <% if user_signed_in? %>
   <div class="main">
     <div class="main-space">
+
       <div class="main-user">
         <div class="main-user-btn">
-          <%= link_to "#{ current_user.nickname}の夢" , "#", class: "user-nickname"%>
+          <%= link_to "#{ current_user.nickname}の夢" , user_path(current_user), class: "user-nickname"%>
         </div>
         <div class="btn">
           <%= link_to "夢ができた" , new_dream_path, class: "new-btn"%>
         </div>
       </div>
+
       <%# ----夢リスト---- %>
       <div class="dream-list">
         <div class="dream-list-main">
