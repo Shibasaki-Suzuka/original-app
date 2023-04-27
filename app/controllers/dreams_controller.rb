@@ -18,6 +18,10 @@ class DreamsController < ApplicationController
     end
   end
 
+  def show
+    @dream = Dream.find(params[:id])
+  end
+
   private
   def move_to_index
     unless user_signed_in?
