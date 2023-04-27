@@ -6,6 +6,7 @@ class Dream < ApplicationRecord
   validate :validate_count
 
   belongs_to :user
+  has_many   :achieves
 
   private
   def validate_count
