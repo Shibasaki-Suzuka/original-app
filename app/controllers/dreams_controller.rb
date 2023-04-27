@@ -2,6 +2,7 @@ class DreamsController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
+    @dreams = Dream.includes(:user)
   end
 
   def new
