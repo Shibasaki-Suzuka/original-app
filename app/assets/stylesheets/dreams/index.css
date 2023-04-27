@@ -3,7 +3,7 @@
 .main {
   width: 100vw;
   display: flex;
-  background: url(assets/header-image.png) repeat center/cover ;
+  background: url(assets/top_background.png) repeat top/cover;
 }
 
 .main-space {
@@ -13,7 +13,6 @@
 
 .main-user {
   height: 100px;
-  background-color: aquamarine;
   display: flex;
   align-items: center;
   justify-content: space-between;
