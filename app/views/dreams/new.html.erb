@@ -1,5 +1,4 @@
 <%= form_with model: @dream, url: dreams_path, class: 'hoge', local: true do |f| %>
-<%# <%= render 'shared/error_messages', model: f.object %>
 <div class="dreams">
   <div class="dreams-main">
     <p class="point-message">
@@ -25,10 +24,10 @@
         </tr>
       </tbody>
     </table>
-  </div>
-  <div class="save-btn">
-    <%= f.submit "保存する" ,class:"sell-btn" %>
-    <%= link_to 'もどる', root_path, class:"back-btn" %>
+    <div class="save-btn">
+      <%= f.submit "保存する" ,class:"storage-btn" %>
+      <%= link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
   </div>
 </div>
 <% end %>
