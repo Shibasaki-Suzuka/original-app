@@ -26,6 +26,15 @@ class DreamsController < ApplicationController
     @dream = Dream.find(params[:id])
   end
 
+  def update
+    @dream = Dream.find(params[:id])
+    if @dream.update(dream_params)
+      redirect_to dream_path(@dream)
+    else
+      render :edit
+    end
+  end
+
   private
   def move_to_index
     unless user_signed_in?

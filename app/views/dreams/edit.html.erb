@@ -1,1 +1,36 @@
-edit
+<%= form_with model: @dream, url: dream_path, class: 'hoge', local: true do |f| %>
+<%# <%= render 'shared/error_messages', model: f.object %>
+<div class="dreams">
+  <div class="dreams-main">
+    <p class="point-message">
+      ★Point！コストと期限を決めることでより達成に近づきます！
+    </p>
+    <table class="dream-table">
+      <thead class="dream_content">
+        <tr class="dream__contents">
+          <th class="item">No.</th>
+          <th class="dream-item">あなたの夢は？</th>
+          <th class="item">costは？</th>
+          <th class="item">いつまでに？</th>
+          <th class="memo-item">調べたこと</th>
+        </tr>
+      </thead>
+      <tbody class="dream-tbody">
+        <tr class="dream-text">
+          <td><%= @dream.id %></td>
+          <td><%= f.text_area :dream_list, class:"dream-input-default" %></td>
+          <td><%= f.text_area :cost, class:"dream-input-default" %></td>
+          <td><%= f.text_area :due, class:"dream-input-default" %></td>
+          <td><%= f.text_area :memo, class:"dream-input-default" %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="save-btn">
+    <%= f.submit "保存する" ,class:"sell-btn" %>
+    <%= link_to 'もどる', root_path, class:"back-btn" %>
+  </div>
+</div>
+<% end %>
+
+
