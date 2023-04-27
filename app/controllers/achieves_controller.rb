@@ -1,10 +1,22 @@
 class AchievesController < ApplicationController
+
+  def new
+    @dream = Dream.find(params[:dream_id])
+  end
+
   def create
-    Comment.create(comment_params)
+    @dream = Dream.find(params[:dream_id])
+    @achieve = Achieve.new(achieve_params)
+    @achieves = @dream.comments.includes(:user)
+    if @achieve.save
+      redirect_to dream_path(@achieve.dream)
+    else
+      render "dreams/show"
+    end
   end
 
   private
-  def comment_params
-    params.require(:comment).permit(:text).merge(user_id: current_user.id, tweet_id: params[:tweet_id])
+  def achieve_params
+    params.require(:achieve).permit(:success_day, :comment, :image).merge(user_id: current_user.id, dream_id: params[:dream_id])
   end
 end

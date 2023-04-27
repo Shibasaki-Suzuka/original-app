@@ -17,6 +17,7 @@
 
 * has_many :dreams
 * has_many :friends
+* has_many :achieves
 
 ## dreams table
 
@@ -41,10 +42,12 @@
 | comment       | text            |                               |
 | success_day   | date            | null: false                   |
 | dream         | references      | null: false, foreign_key: true|
+| user          | references      | null: false, foreign_key: true|
 
 ### Association
 
 * belongs_to :dream
+* belongs_to :user
 
 ## favorites table
 
