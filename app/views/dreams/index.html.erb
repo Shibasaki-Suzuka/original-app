@@ -1,7 +1,6 @@
 <% if user_signed_in? %>
   <div class="main">
     <div class="main-space">
-
       <div class="main-user">
         <div class="main-user-btn">
           <%= link_to "#{ current_user.nickname}のゆめ" , user_path(current_user), class: "user-nickname"%>
@@ -17,12 +16,8 @@
           <table class="dream-table">
             <thead class="dream_content">
               <tr class="dream__contents">
-
-
                 <th class="item-no">No.</th>
                 <th class="item-dream">あなたのゆめ</th>
-
-
                 <th class="item">cost</th>
                 <th class="item">期限</th>
                 <th class="item-memo">調べたこと</th>
@@ -43,7 +38,6 @@
         </div>
       </div>
     </div>
-    
     
     <%# ---friend list---- %>
     <div class="main-light">

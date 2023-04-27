@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_24_103443) do
+ActiveRecord::Schema.define(version: 2023_04_27_134019) do
+
+  create_table "achieves", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "success_day", null: false
+    t.text "comment"
+    t.bigint "dream_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["dream_id"], name: "index_achieves_on_dream_id"
+  end
 
   create_table "dreams", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "dream_list", null: false
@@ -41,5 +50,6 @@ ActiveRecord::Schema.define(version: 2023_04_24_103443) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "achieves", "dreams"
   add_foreign_key "dreams", "users"
 end
