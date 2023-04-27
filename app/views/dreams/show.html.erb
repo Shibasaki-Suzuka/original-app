@@ -1,0 +1,61 @@
+<div class="registration-main">
+  <div class='form-wrap'>
+    <div class='form-header'>
+      <h1 class="form-header-text">
+        ゆめの詳細
+      </h1>
+    </div>
+    <div class="dreams-contents">
+
+      <div class="dream-contents">
+        <div class="dream-title">
+          ゆめの内容
+        </div>
+        <div class="dream-text">
+          <%= @dream.dream_list %>
+        </div>
+      </div>
+      <div class="dream-contents">
+        <div class="dream-title">
+          cost
+        </div>
+        <div class="dream-text">
+          <% if @dream.cost.present? %>
+            <%= @dream.cost %>
+          <% else %>
+            &nbsp;
+          <% end %>
+        </div>
+      </div>
+      <div class="dream-contents">
+        <div class="dream-title">
+          期間
+        </div>
+        <div class="dream-text">
+          <% if @dream.cost.present? %>
+            <%= @dream.due %>
+          <% else %>
+            &nbsp;
+          <% end %>
+        </div>
+      </div>
+      <div class="dream-contents">
+        <div class="dream-title">
+          調べたこと
+        </div>
+        <div class="dream-text">
+          <% if @dream.cost.present? %>
+            <%= @dream.memo %>
+          <% else %>
+            &nbsp;
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+    <div class="save-btn">
+      <%= link_to '編集', edit_dream_path, class:"edit-btn" %>
+      <%= link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+  </div>
+</div>
