@@ -1,43 +1,85 @@
 
 
 .main {
-  width: 100%;
+  width: 100vw;
   display: flex;
+  background: url(assets/header-image.png) repeat center/cover ;
 }
 
 .main-space {
-  width: 70%;
+  width: 100%;
   height: 100%;
 }
 
 .main-user {
   height: 100px;
-  background-color: gray;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .user-nickname {
-  background-color: bisque;
   text-decoration: none;
   font-size: 30px;
   padding-left: 30px;
-  position: relative;
+  /* position: relative; */
   top: 50px
 }
 
+.new-btn {
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 50px;
+  background-color: brown;
+  color: #8B4513;
+  background-color: #fff;
+  padding: 0.4em 1.2em;
+  border: 4px #87CEFA solid;
+  border-radius: 5px;
+  transition: 0.4s ease;
+}
+
+.new-btn:hover{
+  color: #fff;
+  background: #87CEFA;
+}
+
 .dream-list {
-  background-color: pink;
-  width: 100%;
   height: 100vh;
+  padding: 15px;
 }
 
 .dream-list-main {
+  background-color: pink;
+  padding: 0 0 10px 20px;
+}
+
+.dream_content {
   background-color: palevioletred;
-  padding: 10px;
+}
+
+.dream-tbody {
+  background-color: aquamarine;
 }
 
 /* ---friend list---- */
 .main-light {
-  background-color: beige;
-  width: 30%;
+  width: 250px;
+}
 
+.friends {
+  background-color: #87CEFA;
+  margin: 5px 20px 5px 5px;
+  padding: 10px;
+  border-radius: 20px
+}
+
+.friend-list {
+  text-align: center;
+  font-weight: bold;
+}
+
+.friend-list-main {
+  background-color: antiquewhite;
 }

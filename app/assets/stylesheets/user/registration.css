@@ -1,6 +1,15 @@
 .registration-main {
   width: 100%;
   min-width: 800px;
+  height: 100%;
+  background: url(assets/background2.png) repeat center/cover ;
+  display: flex;
+  justify-content: center;
+}
+
+.session-main {
+  width: 100%;
+  min-width: 800px;
   height: 100vh;
   background: url(assets/background2.png) repeat center/cover ;
   display: flex;
@@ -9,9 +18,19 @@
 
 .form-wrap {
   width: 50%;
+  background-color: white;
+  padding-bottom: 70px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 30px;
+}
+
+.session-form-wrap {
+  width: 50%;
   height: 500px;
   background-color: white;
   padding-bottom: 70px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 30px;
 }
 
 .form-header {
@@ -35,9 +54,9 @@
   padding-top: 20px;
 }
 
-/* .form-group:first-child {
+.form-group:first-child {
   padding: 0;
-} */
+}
 
 .form-text-wrap {
   width: 100%;
@@ -77,13 +96,6 @@
   margin-top: 3px;
 }
 
-.form-info-header {
-  font-weight: bold;
-}
-
-.form-info-text {
-  font-size: 15px;
-}
 
 .input-name-wrap {
   display: flex;
