@@ -1,7 +1,48 @@
-<div class="">
-  <div class="">
-    <h1 class="">
-      <%= @nickname %>のマイページ
-    </h1>
+<div class="registration-main">
+  <div class='form-wrap'>
+    <div class='form-header'>
+      <h1 class="form-header-text">
+        <%= "#{@user.nickname}さんの登録情報"%>
+      </h1>
+    </div>
+
+    <div class="mypage-form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">ニックネーム</label>
+      </div>
+      <%= @user.nickname %>
+    </div>
+    <div class="mypage-form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">メールアドレス</label>
+      </div>
+      <%= @user.email %>
+    </div>
+    <div class="mypage-form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">お名前(全角)</label>
+      </div>
+      <div class='inputed-name-wrap'>
+        <%= @user.last_name %>
+        <%= @user.first_name %>
+      </div>
+    </div>
+    <div class="mypage-form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">お名前ひらがな(全角)</label>
+      </div>
+      <div class='inputed-name-wrap'>
+        <%= @user.last_name_hiragana %>
+        <%= @user.first_name_hiragana %>
+      </div>
+    </div>
+    <div class="mypage-form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">生年月日</label>
+      </div>
+      <div class='input-birth-wrap'>
+        <%= @user.birthday %>
+      </div>
+    </div>
   </div>
 </div>
