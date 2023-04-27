@@ -37,11 +37,15 @@
   padding-right: 20px;
 }
 
-.dream-item {
+.item-no {
+  padding-right: 5%;
+}
+
+.item-dream {
   width: 40%;
 }
 
-.memo-item {
+.item-memo {
   width: 30%;
 }
 
