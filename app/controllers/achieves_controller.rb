@@ -6,12 +6,12 @@ class AchievesController < ApplicationController
 
   def create
     @dream = Dream.find(params[:dream_id])
-    # @achieve = Achieve.new(achieve_params)
-    # @achieves = @dream.comments.includes(:user)
+    @achieve = Achieve.new(achieve_params)
+    @achieves = @dream.comments.includes(:user)
     if @achieve.save
       redirect_to dream_path(@achieve.dream)
     else
-      render "dreams/show"
+      render "achieve/new"
     end
   end
 

@@ -1,61 +1,84 @@
 <% if user_signed_in? %>
-  <div class="main">
-    <div class="main-space">
-      <div class="main-user">
-        <div class="main-user-btn">
-          <%= link_to "#{ current_user.nickname}のゆめ" , user_path(current_user), class: "user-nickname"%>
+  <%# <% if current_user.id == @dreams.user_id %>
+    <div class="main">
+      <div class="main-space">
+        <div class="main-user">
+          <div class="main-user-btn">
+            <%= link_to "#{current_user.nickname}のゆめ" , user_path(current_user), class: "user-nickname"%>
+          </div>
+          <div class="btn-list">
+            <%= link_to "ゆめができた" , new_dream_path, class: "new-btn"%>
+          </div>
         </div>
-        <div class="btn-list">
-          <%= link_to "ゆめができた" , new_dream_path, class: "new-btn"%>
-        </div>
-      </div>
 
-      <%# ----夢リスト---- %>
-      <div class="dream-list">
-        <div class="dream-list-main">
-          <table class="dream-table">
-            <thead class="dream_content">
-              <tr class="dream__contents">
-                <th class="item-no">No.</th>
-                <th class="item-dream">あなたのゆめ</th>
-                <th class="item">cost</th>
-                <th class="item">期限</th>
-                <th class="item-memo">調べたこと</th>
-              </tr>
-            </thead>
-            <tbody class="dream-tbody">
-              <% @dreams.each do |dream| %>
-                <tr class="dream-text">
-                  <td><%= link_to dream.id, dream_path(dream.id), class: :card__title %></td>
-                  <td><%= dream.dream_list %></td>
-                  <td><%= dream.cost %></td>
-                  <td><%= dream.due %></td>
-                  <td><%= dream.memo %></td>
+        <%# ----夢リスト---- %>
+        <div class="dream-list">
+          <div class="dream-list-main">
+            <table class="dream-table">
+              <thead class="dream_content">
+                <tr class="dream__contents">
+                  <th class="item-no">No.</th>
+                  <th class="item-dream">あなたのゆめ</th>
+                  <th class="item">cost</th>
+                  <th class="item">期限</th>
+                  <th class="item-memo">調べたこと</th>
                 </tr>
-              <% end %>
-            </tbody>
-          </table>
+              </thead>
+              <tbody class="dream-tbody">
+                <% @dreams.each do |dream| %>
+                  <tr class="dream-text">
+                    <td><%= link_to dream.id, dream_path(dream.id), class: :card__title %></td>
+                    <td><%= dream.dream_list %></td>
+                    <td><%= dream.cost %></td>
+                    <td><%= dream.due %></td>
+                    <td><%= dream.memo %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <%# ---friend list---- %>
+      <div class="main-light">
+        <div class="friends">
+          <div class="friend-list">
+            friend list
+          </div>
+          <ul class="friend-list-main">
+            <li>ふじい</li>
+            <li>いしくら</li>
+            <li>えんどう</li>
+            <li>おぜ</li>
+            <li>わたなべ</li>
+            <li>こうだ</li>
+            <li>あべ</li>
+          </ul>
         </div>
       </div>
     </div>
-    
-    <%# ---friend list---- %>
-    <div class="main-light">
-      <div class="friends">
-        <div class="friend-list">
-          friend list
-        </div>
-        <ul class="friend-list-main">
-          <li>ふじい</li>
-          <li>いしくら</li>
-          <li>えんどう</li>
-          <li>おぜ</li>
-          <li>わたなべ</li>
-          <li>こうだ</li>
-          <li>あべ</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <%# end %>
 <% else %>
+    <div class="logout-main">
+      <div claas="logout-main-space">
+        <div claas="logout-message">
+          <div class="logout-message1">
+            あなたのゆめはなんですか？
+          </div>
+          <div class="logout-message2">
+            まずは100こ創って、叶える準備をしましょう！
+          </div>
+          <div class="logout-message3">
+            Dream note はあなたをおうえんしています
+          </div>
+          <div class="logout-message2">
+            やりたいこと、行きたい場所、食べたいもの
+          </div>
+          <div class="logout-message3">
+            思い浮かぶゆめをどんどんかきこみましょう
+          </div>
+        </div>
+      </div>
+    </div>
 <% end %>

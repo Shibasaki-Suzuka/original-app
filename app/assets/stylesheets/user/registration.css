@@ -18,7 +18,8 @@
 
 .form-wrap {
   width: 50%;
-  background-color: white;
+  background: url(assets/text-background.png) repeat center/cover ;
+  background-color: #f4fcff;
   padding-bottom: 70px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
   margin: 30px;
@@ -27,7 +28,8 @@
 .session-form-wrap {
   width: 50%;
   height: 500px;
-  background-color: white;
+  background: url(assets/text-background.png) repeat center/cover ;
+  background-color: #f4fcff;
   padding-bottom: 70px;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
   margin: 30px;
