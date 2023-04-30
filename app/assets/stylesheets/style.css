@@ -1,10 +1,7 @@
 
 
 .header {
-  background-image: url('header-image.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-image: url('header-image.png') no-repeat center cover;
 }
 
 .inner {
