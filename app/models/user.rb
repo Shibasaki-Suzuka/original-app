@@ -13,5 +13,4 @@ class User < ApplicationRecord
   end
 
   has_many :dreams
-  has_many :achieves
 end

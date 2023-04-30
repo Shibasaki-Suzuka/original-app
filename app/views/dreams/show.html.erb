@@ -32,7 +32,7 @@
           期間
         </div>
         <div class="dream-text">
-          <% if @dream.cost.present? %>
+          <% if @dream.due.present? %>
             <%= @dream.due %>
           <% else %>
             &nbsp;
@@ -44,7 +44,7 @@
           調べたこと
         </div>
         <div class="dream-text">
-          <% if @dream.cost.present? %>
+          <% if @dream.memo.present? %>
             <%= @dream.memo %>
           <% else %>
             &nbsp;
@@ -54,7 +54,7 @@
 
     </div>
     <div class="save-btn">
-      <%= link_to '叶えた！', new_dream_achiefe_path(@dream.id), class:"achieve-btn" %>
+      <%= link_to '叶えた！', dream_achieves_path(@dream.id), class:"achieve-btn" %>
       <%= link_to '編集', edit_dream_path, class:"edit-btn" %>
       <%= link_to 'もどる', root_path, class:"back-btn" %>
     </div>

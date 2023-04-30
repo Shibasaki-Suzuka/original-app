@@ -1,13 +1,14 @@
 class AchievesController < ApplicationController
 
-  def new
+  def index
     @dream = Dream.find(params[:dream_id])
+    @achieve = Achieve.new
   end
 
   def create
     @dream = Dream.find(params[:dream_id])
     @achieve = Achieve.new(achieve_params)
-    @achieves = @dream.comments.includes(:user)
+
     if @achieve.save
       redirect_to dream_path(@achieve.dream)
     else
@@ -17,6 +18,6 @@ class AchievesController < ApplicationController
 
   private
   def achieve_params
-    params.require(:achieve).permit(:success_day, :comment, :image).merge(user_id: current_user.id, dream_id: params[:dream_id])
+    params.require(:achieve).permit(:image,:success_day, :comment).merge(dream_id: params[:dream_id])
   end
 end

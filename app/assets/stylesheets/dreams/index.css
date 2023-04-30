@@ -93,7 +93,7 @@
 .logout-main {
   width: 100vw;
   height: 100vh;
-  /* background: url(assets/logout-top-page.png) no-repeat center/cover;  */
+  background: url(assets/logout-top-page.png) no-repeat center/cover; 
   
 }
 .logout-main-space {
