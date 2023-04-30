@@ -5,19 +5,16 @@ class Dream < ApplicationRecord
     validates :due,  allow_blank: true
     validates :memo, allow_blank: true
   end
-
-  MAX_COUNT = 100
-  validate :validate_count
-
   belongs_to :user
   has_one :achieve
+
+  MAX_COUNT = 100
+  validate :validate_count, on: :create
 
   private
 
   def validate_count
-    current_count = Dream.count
-    return unless current_count + (MAX_COUNT - current_count) < user.dreams.size
-
-    errors.add(:base, "夢は最大#{MAX_COUNT}件までしか登録できません")
+    return unless user && user.dreams.count >= MAX_COUNT
+    errors.add(:base, message: "夢は#{MAX_COUNT}個まで登録できます")
   end
 end
