@@ -13,11 +13,11 @@ class Dream < ApplicationRecord
   has_one :achieve
 
   private
+
   def validate_count
     current_count = Dream.count
-    if current_count + (MAX_COUNT - current_count) < user.dreams.size
-      errors.add(:base, "夢は最大#{MAX_COUNT}件までしか登録できません")
-    end
-  end
+    return unless current_count + (MAX_COUNT - current_count) < user.dreams.size
 
+    errors.add(:base, "夢は最大#{MAX_COUNT}件までしか登録できません")
+  end
 end
