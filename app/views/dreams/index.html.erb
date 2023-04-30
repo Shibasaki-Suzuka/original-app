@@ -17,7 +17,7 @@
           <table class="dream-table">
             <thead class="dream_content">
               <tr class="dream__contents">
-                <th class="item-no">No.</th>
+                <th class="item-no"></th>
                 <th class="item-dream">あなたのゆめ</th>
                 <th class="item">cost</th>
                 <th class="item">期限</th>
@@ -28,7 +28,7 @@
               <% @dreams.each do |dream| %>
                 <% if current_user.id == dream.user_id %>
                   <tr class="dream-text">
-                    <td><%= link_to dream.id, dream_path(dream.id), class: :card__title %></td>
+                    <td><%= link_to "編集", dream_path(dream.id), class: :edit_path_btn %></td>
                     <td><%= dream.dream_list %></td>
                     <td><%= dream.cost %></td>
                     <td><%= dream.due %></td>

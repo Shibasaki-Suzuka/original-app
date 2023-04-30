@@ -10,7 +10,6 @@
     <table class="dream-table">
       <thead class="dream_content">
         <tr class="dream__contents">
-          <th class="item">No.</th>
           <th class="dream-item">あなたの夢は？</th>
           <th class="item">costは？</th>
           <th class="item">いつまでに？</th>
@@ -19,7 +18,6 @@
       </thead>
       <tbody class="dream-tbody">
         <tr class="dream-text">
-          <td><%= @dream.id %></td>
           <td><%= f.text_area :dream_list, class:"dream-input-default" %></td>
           <td><%= f.text_area :cost, class:"dream-input-default" %></td>
           <td><%= f.text_area :due, class:"dream-input-default" %></td>
