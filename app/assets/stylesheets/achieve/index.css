@@ -10,3 +10,33 @@
   width: 500px;
   margin: 0 auto;
 }
+
+/* 叶えたゆめのコメント表示 */
+.achieve-dreams-contents {
+  width: 70%;
+  border: 4px solid #FF69B4;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px auto;
+}
+
+.dream-contents {
+  margin-bottom: 10px;
+}
+
+
+.achieve-dream-title {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid #FF69B4;
+}
+
+.achieve-dream-image {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid #FF69B4;
+  margin-bottom: 10px;
+}

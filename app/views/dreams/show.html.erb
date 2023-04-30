@@ -5,8 +5,8 @@
         ゆめの詳細
       </h1>
     </div>
-    <div class="dreams-contents">
 
+    <div class="dreams-contents">
       <div class="dream-contents">
         <div class="dream-title">
           ゆめの内容
@@ -51,11 +51,45 @@
           <% end %>
         </div>
       </div>
-
     </div>
+
+    <%# 叶えたゆめのコメント表示 %>
+    <% if @achieve.present? %>
+      <div class="achieve-dreams-contents">
+        <div class="achieve-dream-contents">
+          <div class="achieve-dream-title">
+            達成日
+          </div>
+          <div class="dream-text">
+            <%= @achieve.success_day %>
+          </div>
+        </div>
+        <div class="dream-contents">
+          <div class="achieve-dream-title">
+            コメント
+          </div>
+          <div class="dream-text">
+            <%= @achieve.comment %>
+          </div>
+        </div>
+        <div class="dream-contents">
+          <div class="achieve-dream-image">
+            想い出の写真
+          </div>
+          <div class="dream-text">
+            <% if @achieve.image.attached? %>
+              <%= image_tag @achieve.image.variant(resize: '450x450') %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
     <div class="save-btn">
-      <%= link_to '叶えた！', dream_achieves_path(@dream.id), class:"achieve-btn" %>
-      <%= link_to '編集', edit_dream_path, class:"edit-btn" %>
+      <% unless @achieve.present? %>
+        <%= link_to '叶えた！', dream_achieves_path(@dream.id), class:"achieve-btn" %>
+        <%= link_to '編集', edit_dream_path, class:"edit-btn" %>
+      <% end %>
       <%= link_to 'もどる', root_path, class:"back-btn" %>
     </div>
   </div>

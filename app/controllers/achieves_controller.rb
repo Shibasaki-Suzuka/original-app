@@ -8,7 +8,6 @@ class AchievesController < ApplicationController
   def create
     @dream = Dream.find(params[:dream_id])
     @achieve = Achieve.new(achieve_params)
-
     if @achieve.save
       redirect_to dream_path(@achieve.dream)
     else
