@@ -20,6 +20,7 @@ class DreamsController < ApplicationController
 
   def show
     @dream = Dream.find(params[:id])
+    @achieve = @dream.achieve
   end
 
   def edit
@@ -36,10 +37,11 @@ class DreamsController < ApplicationController
   end
 
   private
+
   def move_to_index
-    unless user_signed_in?
-      redirect_to new_user_registration_path
-    end
+    return if user_signed_in?
+
+    redirect_to new_user_registration_path
   end
 
   def dream_params

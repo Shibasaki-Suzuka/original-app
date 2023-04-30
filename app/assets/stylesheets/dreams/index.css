@@ -18,18 +18,27 @@
   justify-content: space-between;
 }
 
+.main-user-btn {
+  padding-left: 30px;
+  top: 50px
+}
 .user-nickname {
   text-decoration: none;
   font-size: 30px;
-  padding-left: 30px;
-  top: 50px
+  color: #f8e8ff;
+  background-color: rgb(250, 121, 186);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.dream_content {
+  font-weight: bold;
 }
 
 .new-btn {
   text-decoration: none;
   font-size: 20px;
   margin-right: 50px;
-  background-color: brown;
   color: #8B4513;
   background-color: #fff;
   padding: 0.4em 1.2em;
@@ -49,17 +58,21 @@
 }
 
 .dream-list-main {
-  background-color: pink;
+  background: url(assets/text-background.png) repeat center/cover ;
+  background-color: #f4fcff;
+  border-radius: 20px;
   padding: 0 0 10px 20px;
 }
 
-.dream_content {
-  background-color: palevioletred;
+.edit_path_btn {
+  background-color: rgb(193, 193, 193);
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+  padding: 0 4px;
+  border-radius: 5px;
 }
 
-.dream-tbody {
-  background-color: aquamarine;
-}
 
 /* ---friend list---- */
 .main-light {
@@ -79,5 +92,35 @@
 }
 
 .friend-list-main {
-  background-color: antiquewhite;
+  background-color: rgb(230, 247, 250);
+  padding: 5px;
+  border-radius: 20px
+}
+
+/* ログアウト時のトップページ */
+.logout-main {
+  width: 100vw;
+  height: 100vh;
+  background: url(assets/logout-top-page.png) no-repeat center/cover; 
+  
+}
+.logout-main-space {
+  width: 100%;
+  height: 100%;
+}
+
+.logout-message1 {
+  font-size: 40px;
+  padding: 80px 0 20px 300px;
+}
+
+.logout-message2 {
+  font-size: 25px;
+  padding: 40px 0 20px 500px;
+}
+
+.logout-message3 {
+  font-size: 25px;
+  padding: 80px 0 20px 300px;
+
 }

@@ -23,7 +23,7 @@
 | Column        | Type            | Options                       |
 |---------------|-----------------|-------------------------------|
 | dream_list    | string          | null: false                   |
-| cost          | integer         |                               |
+| cost          | string          |                               |
 | due           | string          |                               |
 | memo          | text            |                               |
 | user          | references      | null: false, foreign_key: true|
@@ -32,14 +32,14 @@
 
 * belongs_to :user
 * belongs_to :favorite
-* has_many   :achieves 
+* has_one :achieve 
 
 ## achieves table
 
 | Column        | Type            | Options                       |
 |---------------|-----------------|-------------------------------|
 | comment       | text            |                               |
-| success_day   | date            | null: false                   |
+| success_day   | text            | null: false                   |
 | dream         | references      | null: false, foreign_key: true|
 
 ### Association

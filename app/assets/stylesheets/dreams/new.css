@@ -14,7 +14,10 @@
 .dreams-main {
   padding: 20px;
   width: 80%;
-  background-color: antiquewhite;
+  background: url(assets/text-background.png) repeat center/cover ;
+  background-color: #f4fcff;
+  border-radius: 20px;
+
 }
 
 .point-message {
@@ -32,6 +35,7 @@
 
 .dream__contents {
   font-size: 15px;
+  border-bottom: 1px solid rgb(127, 177, 248);
 }
 
 .item {

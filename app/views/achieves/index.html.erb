@@ -1,0 +1,33 @@
+<%= form_with(model: [@dream, @achieve], class:'new-achieve-form', local: true) do |f| %>
+  <div class="dreams">
+    <div class="dreams-main">
+      <p class="point-message">
+        ★Point！達成の想い出に写真とコメントをのこしましょう！
+      </p>
+      <div class="dream-achieve-form">
+        <div class="dream-contents">
+          <div class="achieve-dream-text">
+            ゆめは「　<%= @dream.dream_list %>　」
+          </div>
+        </div>
+        <div class="dream-text">
+          <%= f.text_area :success_day, placeholder: "日付", class:"dream-input-default" %>
+        </div>
+        <div class="dream-text">
+          <%= f.text_area :comment, placeholder: "コメントする", class:"dream-input-default" %>
+        </div>
+        <div class="field">
+          <%= f.label :image, "想い出の写真" %><br />
+          <%= f.file_field :image, id:"prototype_image" %>
+        </div>
+          
+        <div class="save-btn">
+          <%= f.submit "保存する" ,class:"storage-btn" %>
+          <%= link_to 'もどる',  dream_path(@dream.id), class:"back-btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
