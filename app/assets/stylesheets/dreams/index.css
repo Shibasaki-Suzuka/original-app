@@ -3,7 +3,10 @@
 .main {
   width: 100vw;
   display: flex;
-  background: url(assets/top_background.png) repeat top/cover;
+  background-image: url('top_background.png');
+  background-repeat: repeat;
+  background-position: top;
+  background-size: cover;
 }
 
 .main-space {
@@ -58,7 +61,10 @@
 }
 
 .dream-list-main {
-  background: url(assets/text-background.png) repeat center/cover ;
+  background-image: url('text-background.png');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
   background-color: #f4fcff;
   border-radius: 20px;
   padding: 0 0 10px 20px;
@@ -101,8 +107,10 @@
 .logout-main {
   width: 100vw;
   height: 100vh;
-  background: url(assets/logout-top-page.png) no-repeat center/cover; 
-  
+  background-image: url('logout-top-page.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .logout-main-space {
   width: 100%;
