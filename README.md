@@ -10,8 +10,8 @@ https://original-app-39101.onrender.com/
 # テスト用アカウント
 - Basic認証ID：履歴書参照
 - Basic認証パスワード：履歴書参照
-- メールアドレス：test@email.com
-- パスワード：12345q
+- メールアドレス：sample@test.com
+- パスワード：12345x
 
 # 利用方法
 ## 夢の投稿
