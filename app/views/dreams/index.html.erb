@@ -4,10 +4,10 @@
     <div class="main-space">
       <div class="main-user">
         <div class="main-user-btn">
-          <%= link_to "#{current_user.nickname}のゆめ" , user_path(current_user), class: "user-nickname"%>
+          <%= link_to "#{current_user.nickname}のプロフィール" , user_path(current_user), class: "user-nickname"%>
         </div>
         <div class="btn-list">
-          <%= link_to "ゆめができた" , new_dream_path, class: "new-btn"%>
+          <%= link_to "ゆめの追加" , new_dream_path, class: "new-btn"%>
         </div>
       </div>
 
@@ -19,9 +19,9 @@
               <tr class="dream__contents">
                 <th class="item-no"></th>
                 <th class="item-dream">あなたのゆめ</th>
-                <th class="item">cost</th>
+                <th class="item">金額</th>
                 <th class="item">期限</th>
-                <th class="item-memo">調べたこと</th>
+                <th class="item-memo">メモ</th>
               </tr>
             </thead>
             <tbody class="dream-tbody">
@@ -71,13 +71,13 @@
           まずは100こ創って、叶える準備をしましょう！
         </div>
         <div class="logout-message3">
-          Dream note はあなたをおうえんしています
+          Dream Note はあなたを応援しています
         </div>
         <div class="logout-message2">
           やりたいこと、行きたい場所、食べたいもの
         </div>
         <div class="logout-message3">
-          思い浮かぶゆめをどんどんかきこみましょう
+          思い浮かぶゆめをどんどん書きましょう
         </div>
       </div>
     </div>
