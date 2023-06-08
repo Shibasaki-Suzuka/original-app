@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :dreams, only: [:index, :new, :create, :show, :edit, :update] do
     resources :achieves, only: [:index, :create]
   end
-  resources :users, only: :show
+  resources :users, only: [:show, :edit]
 end
