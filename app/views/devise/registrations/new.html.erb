@@ -11,6 +11,12 @@
 
   <div class="form-group">
     <div class='form-text-wrap'>
+      <label class="form-text">プロフィール画像</label>
+    </div>
+    <%= f.file_field :avatar, class:"avatar-default" %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
       <label class="form-text">ニックネーム</label>
       <span class="indispensable">必須</span>
     </div>
@@ -44,8 +50,8 @@
       <span class="indispensable">必須</span>
     </div>
     <div class='input-name-wrap'>
-      <%= f.text_area :last_name, class:"input-name", id:"last-name", placeholder:"例) 夢野" %>
-      <%= f.text_area :first_name, class:"input-name", id:"first-name", placeholder:"例) ゆめ子" %>
+      <%= f.text_field :last_name, class:"input-name", id:"last-name", placeholder:"例) 夢野" %>
+      <%= f.text_field :first_name, class:"input-name", id:"first-name", placeholder:"例) ゆめ子" %>
     </div>
   </div>
   <div class="form-group">
@@ -54,8 +60,8 @@
       <span class="indispensable">必須</span>
     </div>
     <div class='input-name-wrap'>
-      <%= f.text_area :last_name_hiragana, class:"input-name", id:"last-name-hiragana", placeholder:"例) ゆめの" %>
-      <%= f.text_area :first_name_hiragana, class:"input-name", id:"first-name-hiragana", placeholder:"例) ゆめこ" %>
+      <%= f.text_field :last_name_hiragana, class:"input-name", id:"last-name-hiragana", placeholder:"例) ゆめの" %>
+      <%= f.text_field :first_name_hiragana, class:"input-name", id:"first-name-hiragana", placeholder:"例) ゆめこ" %>
     </div>
   </div>
   <div class="form-group">
