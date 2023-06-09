@@ -7,6 +7,13 @@
     </div>
 
     <div class="mypage-form-group">
+      <% if @user.avatar? %>
+        <%= image_tag @user.avatar.url %>
+      <% else %>
+        <%= image_tag ("noavatar.png") %>
+      <% end %>
+    </div>
+    <div class="mypage-form-group">
       <div class='form-text-wrap'>
         <label class="form-text">ニックネーム</label>
       </div>
