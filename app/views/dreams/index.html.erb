@@ -3,9 +3,6 @@
   <div class="main">
     <div class="main-space">
       <div class="main-user">
-        <div class="main-user-btn">
-          <%= link_to "#{current_user.nickname}のプロフィール" , user_path(current_user), class: "user-nickname"%>
-        </div>
         <div class="btn-list">
           <%= link_to "ゆめの追加" , new_dream_path, class: "new-btn"%>
         </div>
@@ -44,6 +41,15 @@
       
     <%# ---friend list---- %>
     <div class="main-light">
+      <div class="main-user-btn">
+        <%= link_to user_path(current_user), class: "user-nickname" do %>
+          <div class="nickname">
+            <%= current_user.nickname %>
+          </div>
+          <div class="profile-text">のプロフィール</div>
+        <% end %>
+      </div>
+
       <div class="friends">
         <div class="friend-list">
           friend list
