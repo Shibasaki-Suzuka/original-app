@@ -21,19 +21,6 @@
   justify-content: space-between;
 }
 
-.main-user-btn {
-  padding-left: 30px;
-  top: 50px
-}
-.user-nickname {
-  text-decoration: none;
-  font-size: 30px;
-  color: #f8e8ff;
-  background-color: rgb(250, 121, 186);
-  border-radius: 10px;
-  padding: 5px;
-}
-
 .dream_content {
   font-weight: bold;
 }
@@ -84,6 +71,33 @@
 .main-light {
   width: 250px;
 }
+
+.main-user-btn {
+  padding: 10px
+}
+.user-nickname {
+  text-decoration: none;
+  font-size: 20px;
+  color: #8B4513;
+  background-color: #fee9f9;
+  border: 4px rgb(250, 121, 186) solid;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.user-nickname:hover{
+  color: #fff;
+  background: rgb(250, 121, 186);
+}
+
+.user-nickname {
+  display: inline-block;
+}
+
+.nickname, .profile-text {
+  display: block;
+}
+
 
 .friends {
   background-color: #87CEFA;
