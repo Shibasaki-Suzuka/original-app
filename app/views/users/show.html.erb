@@ -10,7 +10,7 @@
       <% if @user.avatar? %>
         <%= image_tag @user.avatar.url %>
       <% else %>
-        <%= image_tag ("noavatar.png") %>
+        <%= image_tag ("noavatar.png"), class: "noavatar" %>
       <% end %>
     </div>
     <div class="mypage-form-group">

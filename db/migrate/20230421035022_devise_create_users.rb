@@ -12,7 +12,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :last_name_hiragana, null: false
       t.string :first_name_hiragana, null: false
       t.date   :birthday, null: false
-      t.string :avatar, null: false
+      t.string :avatar
 
       ## Recoverable
       t.string   :reset_password_token

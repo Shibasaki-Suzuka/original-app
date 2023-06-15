@@ -9,3 +9,8 @@
 .inputed-name-wrap {
   display: flex;
 }
+
+.noavatar {
+  width: 150px;
+  height: 150px;
+}
