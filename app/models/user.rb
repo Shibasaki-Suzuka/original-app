@@ -1,8 +1,12 @@
 class User < ApplicationRecord
+
+  has_many :dreams
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
   with_options presence: true do
     validates :nickname
     validates :last_name,  format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: '全角文字を使用してください' }
@@ -13,9 +17,18 @@ class User < ApplicationRecord
   end
 
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
-  validates :password, format: { with: VALID_PASSWORD_REGEX, message: 'は半角英数を両方含む必要があります' }
+  validates :password, format: { with: VALID_PASSWORD_REGEX, message: 'は半角英数を両方含む必要があります' }, allow_blank: true, on: :update
+  validates :password, format: { with: VALID_PASSWORD_REGEX }, on: :create
 
-  has_many :dreams
+  def update_without_current_password(params)
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+    result = update(params)
+    clean_up_passwords
+    result
+  end
 
   mount_uploader :avatar, AvatarUploader
 end

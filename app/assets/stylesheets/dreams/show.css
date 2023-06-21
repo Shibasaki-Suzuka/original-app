@@ -4,7 +4,7 @@
   background-color: #fff;
   border-radius: 20px;
   padding: 20px;
-  margin: auto;
+  margin: 0px auto 40px;
 }
 
 .dream-contents {
@@ -19,7 +19,7 @@
   border-bottom: 1px solid #3366CC;
 }
 
-.achieve-btn {
+.red-btn {
   background: #FF69B4;
   border: 1px solid #FF69B4;
   color: #fff;
