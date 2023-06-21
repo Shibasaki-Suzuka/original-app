@@ -85,7 +85,7 @@
       </div>
     <% end %>
 
-    <div class="save-btn">
+    <div class="btn-area">
       <% unless @achieve.present? %>
         <%= link_to '叶えた！', dream_achieves_path(@dream.id), class:"red-btn" %>
         <%= link_to '編集', edit_dream_path, class:"edit-btn" %>
