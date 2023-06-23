@@ -1,4 +1,4 @@
-<%= form_with(model: [@dream, @achieve], class:'new-achieve-form', local: true) do |f| %>
+<%= form_with(model: [@dream, @achieve], class:'new-achieve-form', id: 'new_achieve', local: true) do |f| %>
   <div class="dreams">
     <div class="dreams-main">
       <p class="point-message">
@@ -18,8 +18,9 @@
         </div>
         <div class="field">
           <%= f.label :image, "想い出の写真" %><br />
-          <%= f.file_field :image, id:"prototype_image" %>
+          <%= f.file_field :image, id:"achieve_image" %>
         </div>
+        <div id="previews"></div>
           
         <div class="btn-area">
           <%= f.submit "保存する" ,class:"storage-btn" %>
