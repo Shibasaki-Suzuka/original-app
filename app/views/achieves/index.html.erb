@@ -19,8 +19,9 @@
         <div class="field">
           <%= f.label :image, "想い出の写真" %><br />
           <%= f.file_field :image, id:"achieve_image" %>
+          <div id="previews"></div>
         </div>
-        <div id="previews"></div>
+        
           
         <div class="btn-area">
           <%= f.submit "保存する" ,class:"storage-btn" %>
