@@ -40,3 +40,9 @@
   border-bottom: 1px solid #FF69B4;
   margin-bottom: 10px;
 }
+
+/* プレビュー画像サイズ */
+.preview-size {
+  width: 350px;
+  height: auto;
+}
