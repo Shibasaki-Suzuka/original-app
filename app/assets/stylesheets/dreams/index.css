@@ -10,7 +10,7 @@
 }
 
 .main-space {
-  width: 100%;
+  width: 80%;
   height: 100%;
 }
 
@@ -69,13 +69,14 @@
 
 /* ---friend list---- */
 .main-light {
-  width: 250px;
+  width: 20%;
 }
 
 .main-user-btn {
   padding: 10px
 }
 .user-nickname {
+  height: 100px;
   text-decoration: none;
   font-size: 20px;
   color: #8B4513;
@@ -83,6 +84,7 @@
   border: 4px rgb(250, 121, 186) solid;
   border-radius: 15px;
   padding: 5px;
+  display: inline-block;
 }
 
 .user-nickname:hover{
@@ -90,12 +92,12 @@
   background: rgb(250, 121, 186);
 }
 
-.user-nickname {
-  display: inline-block;
+.nickname {
+  display: flex;
+  align-items: center;
 }
-
 .nickname, .profile-text {
-  display: block;
+  /* display: block; */
 }
 
 

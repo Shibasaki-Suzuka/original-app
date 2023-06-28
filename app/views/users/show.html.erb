@@ -8,9 +8,9 @@
 
     <div class="mypage-form-group">
       <% if @user.avatar? %>
-        <%= image_tag @user.avatar.url %>
+        <%= image_tag @user.avatar.url, size: "200", class: "user-icon" %>
       <% else %>
-        <%= image_tag ("noavatar.png"), class: "noavatar" %>
+        <%= image_tag ("noavatar.png"), size: "200", class: "user-icon" %>
       <% end %>
     </div>
     <div class="mypage-form-group">

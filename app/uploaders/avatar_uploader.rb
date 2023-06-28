@@ -3,8 +3,20 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
   # version :thumb do
-  process resize_to_fit: [100, 100]
+  # process resize_to_fill: [500, 500, "Center"]
   # end
+  # version :thumb do
+  #   process resize_to_fit: [500, 500]
+  # end
+
+  def auto
+    manipulate! do |avatar|
+      avatar.auto_orient
+    end
+  end
+
+  process :auto
+
   # Choose what kind of storage to use for this uploader:
   storage :file
   # storage :fog
@@ -14,9 +26,11 @@ class AvatarUploader < CarrierWave::Uploader::Base
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
+
   def default_url
-    "noavatar.png"
+    'noavatar.png'
   end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:

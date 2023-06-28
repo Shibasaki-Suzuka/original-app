@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   has_many :dreams
 
   # Include default devise modules. Others available are:

@@ -15,6 +15,7 @@ class Dream < ApplicationRecord
 
   def validate_count
     return unless user && user.dreams.count >= MAX_COUNT
+
     errors.add(:base, message: "夢は#{MAX_COUNT}個まで登録できます")
   end
 end

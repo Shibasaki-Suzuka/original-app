@@ -42,12 +42,16 @@
     <%# ---friend list---- %>
     <div class="main-light">
       <div class="main-user-btn">
-        
         <%= link_to user_path(current_user), class: "user-nickname" do %>
           <div class="nickname">
+            <% if current_user.avatar? %>
+             <img src="<%= current_user.avatar %>" width="50" height="50" class = dream-user-icon >
+            <% else %>
+              <%= image_tag ("noavatar.png"), size: "50", class: "user-icon" %>
+            <% end %>
             <%= current_user.nickname %>
           </div>
-          <div class="profile-text">のプロフィール</div>
+          <div class="profile-text">　　　のプロフィール</div>
         <% end %>
       </div>
 
