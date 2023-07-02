@@ -14,11 +14,11 @@
   height: 100%;
 }
 
-.main-user {
+.main-btn {
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:flex-end
 }
 
 .dream_content {
@@ -28,7 +28,6 @@
 .new-btn {
   text-decoration: none;
   font-size: 20px;
-  margin-right: 50px;
   color: #8B4513;
   background-color: #fff;
   padding: 0.4em 1.2em;
@@ -72,7 +71,7 @@
   width: 20%;
 }
 
-.main-user-btn {
+.user-plofile {
   padding: 10px
 }
 .user-nickname {
