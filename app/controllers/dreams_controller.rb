@@ -6,7 +6,7 @@ class DreamsController < ApplicationController
     @dreams = Dream.find_by_sql([query, current_user])
     count_query = "SELECT COUNT(*) FROM dreams WHERE user_id = ? GROUP BY user_id"
     @dreams_count = Dream.count_by_sql([count_query, current_user])
-    achieve_count_query = "SELECT COUNT(*) FROM achieves WHERE user_id = ? GROUP BY user_id"
+    achieve_count_query = "SELECT COUNT(*) FROM achieves LEFT JOIN dreams ON dreams.id = achieves.dream_id WHERE dreams.user_id = ? GROUP BY dreams.user_id"
     @achieve_count = Dream.count_by_sql([achieve_count_query, current_user])
   end
 
