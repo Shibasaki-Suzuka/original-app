@@ -14,11 +14,22 @@
   height: 100%;
 }
 
-.main-user {
+.main-btn {
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:space-between
+}
+
+.count {
+  text-align: center;
+  font-size: 20px;
+  color: #8B4513;
+  background-color: #ffffff7d;
+  padding: 5px 10px;
+  margin-left: 20px;
+  border: 4px #87CEFA solid;
+  border-radius: 10px;
 }
 
 .dream_content {
@@ -28,12 +39,11 @@
 .new-btn {
   text-decoration: none;
   font-size: 20px;
-  margin-right: 50px;
   color: #8B4513;
-  background-color: #fff;
+  background-color: #ffffffa6;
   padding: 0.4em 1.2em;
   border: 4px #87CEFA solid;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 0.4s ease;
 }
 
@@ -42,6 +52,7 @@
   background: #87CEFA;
 }
 
+/* ---夢リスト---- */
 .dream-list {
   height: 100vh;
   padding: 15px;
@@ -72,7 +83,7 @@
   width: 20%;
 }
 
-.main-user-btn {
+.user-plofile {
   padding: 10px
 }
 .user-nickname {

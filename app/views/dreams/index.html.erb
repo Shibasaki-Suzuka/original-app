@@ -2,9 +2,23 @@
   
   <div class="main">
     <div class="main-space">
-      <div class="main-user">
+      <div class="main-btn">
+        <div class="count">
+          <table>
+            <thead>
+              <tr class="dream__contents">
+                <th>叶えたゆめ　</th>
+                <th>ゆめの合計数</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><%= @achieve_count %></td>
+              <td><%= @dreams_count %>/100</td></tr>
+            </tbody>
+          </table>
+        </div>
         <div class="btn-list">
-          <%= link_to "ゆめの追加" , new_dream_path, class: "new-btn"%>
+          <%= link_to "ゆめの追加" , new_dream_path, class: "new-btn" %>
         </div>
       </div>
 
@@ -23,15 +37,13 @@
             </thead>
             <tbody class="dream-tbody">
               <% @dreams.each do |dream| %>
-                <% if current_user.id == dream.user_id %>
-                  <tr class="dream-text">
-                    <td><%= link_to "編集", dream_path(dream.id), class: :edit_path_btn %></td>
-                    <td><%= dream.dream_list %></td>
-                    <td><%= dream.cost %></td>
-                    <td><%= dream.due %></td>
-                    <td><%= dream.memo %></td>
-                  </tr>
-                <% end %>
+                <tr class="dream-text">
+                  <td><%= link_to "編集", dream_path(dream.id), class: :edit_path_btn %></td>
+                  <td><%= dream.dream_list %></td>
+                  <td><%= dream.cost %></td>
+                  <td><%= dream.due %></td>
+                  <td><%= dream.memo %></td>
+                </tr>
               <% end %>
             </tbody>
           </table>
@@ -41,7 +53,7 @@
       
     <%# ---friend list---- %>
     <div class="main-light">
-      <div class="main-user-btn">
+      <div class="user-plofile">
         <%= link_to user_path(current_user), class: "user-nickname" do %>
           <div class="nickname">
             <% if current_user.avatar? %>

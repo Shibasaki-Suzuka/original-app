@@ -2,7 +2,12 @@ class DreamsController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    @dreams = Dream.includes(:user)
+    query = "SELECT id,dream_list,cost,due,memo,user_id FROM dreams WHERE user_id = ?"
+    @dreams = Dream.find_by_sql([query, current_user])
+    count_query = "SELECT COUNT(*) FROM dreams WHERE user_id = ? GROUP BY user_id"
+    @dreams_count = Dream.count_by_sql([count_query, current_user])
+    achieve_count_query = "SELECT COUNT(*) FROM achieves WHERE user_id = ? GROUP BY user_id"
+    @achieve_count = Dream.count_by_sql([achieve_count_query, current_user])
   end
 
   def new

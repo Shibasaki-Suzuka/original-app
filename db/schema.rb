@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2023_04_27_173028) do
 
   create_table "achieves", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
     t.text "success_day", null: false
     t.text "comment"
     t.bigint "dream_id", null: false
