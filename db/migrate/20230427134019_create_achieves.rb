@@ -1,6 +1,7 @@
 class CreateAchieves < ActiveRecord::Migration[6.0]
   def change
     create_table :achieves do |t|
+      t.integer    :user_id
       t.text       :success_day, null: false
       t.text       :comment
       t.references :dream,       null: false, foreign_key: true

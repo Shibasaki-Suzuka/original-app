@@ -10,7 +10,7 @@ class AchievesController < ApplicationController
     if @achieve.save
       redirect_to dream_path(@achieve.dream)
     else
-      render 'achieve/new'
+      render "/dreams/#{achieve.dream.id}"
     end
   end
 
