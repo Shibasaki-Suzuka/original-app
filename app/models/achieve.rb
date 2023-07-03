@@ -6,5 +6,6 @@ class Achieve < ApplicationRecord
   end
 
   belongs_to :dream
+  belongs_to :user
   has_one_attached :image
 end

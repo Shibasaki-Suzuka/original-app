@@ -17,6 +17,6 @@ class AchievesController < ApplicationController
   private
 
   def achieve_params
-    params.require(:achieve).permit(:image, :success_day, :comment).merge(dream_id: params[:dream_id])
+    params.require(:achieve).permit(:image, :success_day, :comment).merge(user_id: current_user.id, dream_id: params[:dream_id])
   end
 end
