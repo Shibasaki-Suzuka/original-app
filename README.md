@@ -36,7 +36,7 @@ https://original-app-39101.onrender.com/
 
 # データベース設計
 ## ER図
-[![Image from Gyazo](https://i.gyazo.com/3e7fc8d326472186cda858bfa3b4e733.png)](https://gyazo.com/3e7fc8d326472186cda858bfa3b4e733)
+[![Image from Gyazo](https://i.gyazo.com/d553d9838eb8a38656f2c7a380238f06.png)](https://gyazo.com/d553d9838eb8a38656f2c7a380238f06)
 
 ## users table
 
@@ -54,7 +54,6 @@ https://original-app-39101.onrender.com/
 ### Association
 
 * has_many :dreams
-* has_many :achieves
 * has_many :friends
 
 ## dreams table
@@ -83,7 +82,6 @@ https://original-app-39101.onrender.com/
 
 ### Association
 
-* belongs_to :user
 * belongs_to :dream
 
 ## favorites table
@@ -111,11 +109,14 @@ https://original-app-39101.onrender.com/
 
 # 開発環境
 - HTML/CSS
+- JavaScript
 - Ruby
 - Ruby on rails
 - mySQL
 
 # 工夫したポイント
+- 一目で現在の夢の個数、達成数がわかるようにしました。
+  -  モチベーションにも繋がるため、数で明確に達成進捗度がわかるようにトップページにカウントの表示を行いました。
 - アプリケーションのページ内の配色を工夫しました。
   - 夢というイメージカラーが虹色で、かわいい配色で楽しく使ってほしいと考えたので青空をイメージする水色を基調カラーとして使用し、強調したい箇所は補色関係にあり、夕焼けをイメージするピンク色にしました。
 - 登録情報に「名前」の他に「ニックネーム」を設けることで、匿名性のあるサービスにしました。

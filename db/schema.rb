@@ -16,11 +16,9 @@ ActiveRecord::Schema.define(version: 2023_04_27_173028) do
     t.text "success_day", null: false
     t.text "comment"
     t.bigint "dream_id", null: false
-    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["dream_id"], name: "index_achieves_on_dream_id"
-    t.index ["user_id"], name: "index_achieves_on_user_id"
   end
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -75,7 +73,6 @@ ActiveRecord::Schema.define(version: 2023_04_27_173028) do
   end
 
   add_foreign_key "achieves", "dreams"
-  add_foreign_key "achieves", "users"
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "dreams", "users"
 end
