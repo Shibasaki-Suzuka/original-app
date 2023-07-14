@@ -9,14 +9,12 @@ class AchievesController < ApplicationController
     @achieve = Achieve.new(achieve_params)
     if @achieve.save
       redirect_to dream_path(@achieve.dream)
-    else
-      render "/dreams/#{achieve.dream.id}"
     end
   end
 
   private
 
   def achieve_params
-    params.require(:achieve).permit(:image, :success_day, :comment).merge(user_id: current_user.id, dream_id: params[:dream_id])
+    params.require(:achieve).permit(:image, :success_day, :comment).merge(dream_id: params[:dream_id])
   end
 end
