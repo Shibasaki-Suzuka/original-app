@@ -7,6 +7,7 @@ class Dream < ApplicationRecord
   end
   belongs_to :user
   has_one :achieve
+  has_many :likes
 
   MAX_COUNT = 100
   validate :validate_count, on: :create
