@@ -1,0 +1,5 @@
+<% if user_signed_in? && dream.liked_by?(current_user)%>
+  <%=link_to "いいね済", dream_likes_path(dream.id),  method: :delete, class: "dream_likes" %>
+<% else %>
+  <%=link_to "いいねする", dream_likes_path(dream.id), method: :post, class: "dream_likes" %>
+<% end %>
