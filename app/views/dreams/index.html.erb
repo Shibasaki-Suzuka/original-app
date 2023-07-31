@@ -29,6 +29,7 @@
             <thead class="dream_content">
               <tr class="dream__contents">
                 <th class="item-no"></th>
+                <th class="item-no"></th>
                 <th class="item-dream">あなたのゆめ</th>
                 <th class="item">金額</th>
                 <th class="item">期限</th>
@@ -39,6 +40,11 @@
               <% @dreams.each do |dream| %>
                 <tr class="dream-text">
                   <td><%= link_to "編集", dream_path(dream.id), class: :edit_path_btn %></td>
+                  <td>
+                    <div id="like-btn<%= dream.id %>">
+                      <%= render partial: "likes/like", locals: { dream: dream } %>
+                    </div>
+                  </td>
                   <td><%= dream.dream_list %></td>
                   <td><%= dream.cost %></td>
                   <td><%= dream.due %></td>
