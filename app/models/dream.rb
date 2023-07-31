@@ -9,6 +9,10 @@ class Dream < ApplicationRecord
   has_one :achieve
   has_many :likes
 
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
+  end
+
   MAX_COUNT = 100
   validate :validate_count, on: :create
 
