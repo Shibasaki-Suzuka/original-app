@@ -77,6 +77,22 @@
   border-radius: 5px;
 }
 
+.like-btn {
+  width: 25px;
+  height: 30px;
+  font-size: 20px;
+  margin-top: 7px;
+  color: #808080; 
+  }
+ 
+ .unlike-btn {
+  width: 25px;
+  height: 30px;
+  font-size: 20px;
+  margin-top: 7px;
+  color: #e54747;
+  }
+
 
 /* ---friend list---- */
 .main-light {
