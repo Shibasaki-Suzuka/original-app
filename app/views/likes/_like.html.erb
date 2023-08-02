@@ -1,5 +1,10 @@
 <% if user_signed_in? && dream.liked_by?(current_user)%>
-  <%=link_to "いいね済", dream_likes_path(dream.id),  method: :delete, class: "dream_likes", remote: true %>
+  <%=link_to dream_likes_path(dream.id),  method: :delete, class: "dream_likes", remote: true do %>
+    <i class="fa-solid fa-heart unlike-btn"></i>
+  <% end %>
 <% else %>
-  <%=link_to "いいねする", dream_likes_path(dream.id), method: :post, class: "dream_likes", remote: true %>
+  <%=link_to dream_likes_path(dream.id), method: :post, class: "dream_likes", remote: true do %>
+    <i class="far fa-heart like-btn"></i>
+  <% end %>
 <% end %>
+<%= dream.likes.count %>

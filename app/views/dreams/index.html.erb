@@ -39,7 +39,7 @@
             <tbody class="dream-tbody">
               <% @dreams.each do |dream| %>
                 <tr class="dream-text">
-                  <td><%= link_to "編集", dream_path(dream.id), class: :edit_path_btn %></td>
+                  <td><%= link_to "詳細", dream_path(dream.id), class: :edit_path_btn %></td>
                   <td>
                     <div id="like-btn<%= dream.id %>">
                       <%= render partial: "likes/like", locals: { dream: dream } %>
