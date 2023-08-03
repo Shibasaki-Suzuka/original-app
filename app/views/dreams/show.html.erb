@@ -84,6 +84,10 @@
         </div>
       </div>
     <% end %>
+    
+    <div class="show-like-btn" id="like-btn<%= @dream.id %>">
+      <%= render partial: "likes/like", locals: { dream: @dream } %>
+    </div>
 
     <div class="btn-area">
       <% unless @achieve.present? %>
