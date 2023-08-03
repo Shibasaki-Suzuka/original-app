@@ -4,7 +4,7 @@
   background-color: #fff;
   border-radius: 20px;
   padding: 20px;
-  margin: 0px auto 40px;
+  margin: 0px auto 20px;
 }
 
 .dream-contents {
@@ -17,6 +17,10 @@
   font-size: 14px;
   font-weight: bold;
   border-bottom: 1px solid #3366CC;
+}
+
+.show-like-btn {
+  margin-left: 110px;
 }
 
 .red-btn {

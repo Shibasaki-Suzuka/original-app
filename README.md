@@ -36,7 +36,7 @@ https://original-app-39101.onrender.com/
 
 # データベース設計
 ## ER図
-[![Image from Gyazo](https://i.gyazo.com/d553d9838eb8a38656f2c7a380238f06.png)](https://gyazo.com/d553d9838eb8a38656f2c7a380238f06)
+[![Image from Gyazo](https://i.gyazo.com/70542822cb2fa6c3dca73a97147b38ee.png)](https://gyazo.com/70542822cb2fa6c3dca73a97147b38ee)
 
 ## users table
 
@@ -54,6 +54,7 @@ https://original-app-39101.onrender.com/
 ### Association
 
 * has_many :dreams
+* has_many :likes
 * has_many :friends
 
 ## dreams table
@@ -69,7 +70,7 @@ https://original-app-39101.onrender.com/
 ### Association
 
 * belongs_to :user
-* belongs_to :favorite
+* has_many :likes
 * has_one :achieve 
 
 ## achieves table
@@ -84,14 +85,16 @@ https://original-app-39101.onrender.com/
 
 * belongs_to :dream
 
-## favorites table
+## likes table
 
 | Column        | Type            | Options                       |
 |---------------|-----------------|-------------------------------|
+| user          | references      | null: false, foreign_key: true|
 | dream         | references      | null: false, foreign_key: true|
 
 ### Association
 
+* belongs_to :user
 * belongs_to :dream
 
 ## friend table
