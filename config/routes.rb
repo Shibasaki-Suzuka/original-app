@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :achieves, only: [:index, :create]
     resource :likes, only: [:create, :destroy]
   end
-  resources :users, only: [:show, :edit] do
+  resources :users, only: [:index, :show, :edit] do
     resource :friends, only: [:create, :destroy]
   end
 end

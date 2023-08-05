@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  
+  <%# ログインしている場合 %>
   <div class="main">
     <div class="main-space">
       <div class="main-btn">
@@ -74,6 +74,9 @@
       </div>
 
       <div class="friends">
+        <%= link_to 'friend sarch!', users_path %>
+      </div>
+      <div class="friends">
         <div class="friend-list">
           friend list
         </div>
@@ -90,6 +93,8 @@
     </div>
   </div>
 <% else %>
+
+  <%# ログインしていない場合 %>
   <div class="logout-main">
     <div claas="logout-main-space">
       <div claas="logout-message">

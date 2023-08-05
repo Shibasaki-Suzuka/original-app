@@ -13,6 +13,11 @@ class User < ApplicationRecord
   has_many :passive_friends, class_name: "Friend", foreign_key: :follower_id
   has_many :followers, through: :passive_friendss, source: :following
 
+  def followed_by?(user)
+    follower =  passive_friends.find_by(following_id: user.id)
+    return follower.present?
+  end
+  
   with_options presence: true do
     validates :nickname
     validates :last_name,  format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: '全角文字を使用してください' }
