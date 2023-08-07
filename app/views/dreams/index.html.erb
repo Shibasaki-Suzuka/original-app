@@ -80,15 +80,22 @@
         <div class="friend-list">
           friend list
         </div>
-        <ul class="friend-list-main">
-          <li>ふじい</li>
-          <li>いしくら</li>
-          <li>えんどう</li>
-          <li>おぜ</li>
-          <li>わたなべ</li>
-          <li>こうだ</li>
-          <li>あべ</li>
-        </ul>
+        <div class="friend-list-main">
+          <% @users.each do |user| %>
+            <div>
+              <%= link_to "#" do %>
+                <% if user.following_by?(current_user) %>
+                  <% if user.avatar? %>
+                    <%= image_tag user.avatar.url, size: "50", class: "user-icon" %>
+                  <% else %>
+                    <%= image_tag ("noavatar.png"), size: "50", class: "user-icon" %>
+                  <% end %>
+                  <%= user.nickname %>
+                <% end %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
