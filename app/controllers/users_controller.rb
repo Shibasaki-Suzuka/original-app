@@ -1,4 +1,11 @@
 class UsersController < ApplicationController
+
+  def index
+    query = "SELECT id,nickname,avatar FROM users"
+    @users = User.find_by_sql([query, current_user])
+    # @users = User.all
+  end
+
   def show
     @user = User.find(params[:id])
   end
@@ -17,6 +24,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :avatar)
+    params.require(:user).permit(:nickname, :email, :avatar)
   end
 end

@@ -8,6 +8,8 @@ class DreamsController < ApplicationController
     @dreams_count = Dream.count_by_sql([count_query, current_user])
     achieve_count_query = "SELECT COUNT(*) FROM achieves LEFT JOIN dreams ON dreams.id = achieves.dream_id WHERE dreams.user_id = ? GROUP BY dreams.user_id"
     @achieve_count = Dream.count_by_sql([achieve_count_query, current_user])
+    user_query = "SELECT id,nickname,avatar FROM users"
+    @users = User.find_by_sql([user_query, current_user])
   end
 
   def new
