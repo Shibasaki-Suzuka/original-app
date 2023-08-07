@@ -17,6 +17,11 @@ class User < ApplicationRecord
     follower =  passive_friends.find_by(following_id: user.id)
     return follower.present?
   end
+
+  def following_by?(user)
+    follower =  active_friends.find_by(follower_id: user.id)
+    return follower.present?
+  end
   
   with_options presence: true do
     validates :nickname

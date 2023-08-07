@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def index
     query = "SELECT id,nickname,avatar FROM users"
     @users = User.find_by_sql([query, current_user])
+    # @users = User.all
   end
 
   def show
