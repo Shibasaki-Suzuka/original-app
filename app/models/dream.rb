@@ -5,6 +5,7 @@ class Dream < ApplicationRecord
     validates :due,  allow_blank: true
     validates :memo, allow_blank: true
   end
+  
   belongs_to :user
   has_one :achieve
   has_many :likes

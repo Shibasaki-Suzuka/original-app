@@ -36,7 +36,7 @@ https://original-app-39101.onrender.com/
 
 # データベース設計
 ## ER図
-[![Image from Gyazo](https://i.gyazo.com/70542822cb2fa6c3dca73a97147b38ee.png)](https://gyazo.com/70542822cb2fa6c3dca73a97147b38ee)
+[![Image from Gyazo](https://i.gyazo.com/4bb4dcfce9cfc6f988e031c1537c61aa.png)](https://gyazo.com/4bb4dcfce9cfc6f988e031c1537c61aa)
 
 ## users table
 
@@ -55,7 +55,10 @@ https://original-app-39101.onrender.com/
 
 * has_many :dreams
 * has_many :likes
-* has_many :friends
+* has_many :active_friends, class_name: "Friend"
+* has_many :followings
+* has_many :passive_friends, class_name: "Friend"
+* has_many :followers
 
 ## dreams table
 
@@ -89,23 +92,25 @@ https://original-app-39101.onrender.com/
 
 | Column        | Type            | Options                       |
 |---------------|-----------------|-------------------------------|
-| user          | references      | null: false, foreign_key: true|
-| dream         | references      | null: false, foreign_key: true|
+| user          | references      |                               |
+| dream         | references      |                               |
 
 ### Association
 
 * belongs_to :user
 * belongs_to :dream
 
-## friend table
+## friends table
 
 | Column        | Type            | Options                       |
 |---------------|-----------------|-------------------------------|
-| user          | references      | null: false, foreign_key: true|
+| following_id  | references      |                               |
+| follower_id   | references      |                               |
 
 ### Association
 
-* belongs_to :user
+* belongs_to :following, class_name: "User"
+* belongs_to :follower, class_name: "User"
 
 # 画面遷移図
 [![Image from Gyazo](https://i.gyazo.com/6d655e3362f5fb1c7e52398a360fdd8c.png)](https://gyazo.com/6d655e3362f5fb1c7e52398a360fdd8c)
