@@ -1,0 +1,1 @@
+document.getElementById('friend-btn<%= @user.id %>').innerHTML = "<%= j(render partial: 'friends/friend', locals: {user: @user}) %>"
