@@ -4,17 +4,19 @@
   <% @users.each do |user| %>
     <div>
       <% if current_user != user %>
-        <% if user.avatar? %>
-          <%= image_tag user.avatar.url, size: "50", class: "user-icon" %>
-        <% else %>
-          <%= image_tag ("noavatar.png"), size: "50", class: "user-icon" %>
-        <% end %>
-        <%= user.nickname %>
-        <% if user.followed_by?(current_user) %>
-          <%=link_to "フォロー中", user_friends_path(user.id),class: "btn" , method: :delete %>
-        <% else %>
-          <%=link_to "フォローする", user_friends_path(user.id),class: "btn" ,method: :post %>
-        <% end %>
+        <div>
+          <% if user.avatar? %>
+            <%= image_tag user.avatar.url, size: "50", class: "user-icon" %>
+          <% else %>
+            <%= image_tag ("noavatar.png"), size: "50", class: "user-icon" %>
+          <% end %>
+        </div>
+        <div>
+          <%= user.nickname %>
+        </div>
+        <div id="friend-btn<%= user.id %>">
+          <%= render partial: "friends/friend", locals: { user: user } %>
+        </div>
       <% end %>
     </div>
   <% end %>
