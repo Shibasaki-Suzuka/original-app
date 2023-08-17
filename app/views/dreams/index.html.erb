@@ -7,8 +7,8 @@
           <table>
             <thead>
               <tr class="dream__contents">
-                <th>叶えたゆめ　</th>
-                <th>ゆめの合計数</th>
+                <th class="dream_count">叶えたゆめ</th>
+                <th class="dream_count">ゆめの合計数</th>
               </tr>
             </thead>
             <tbody>
@@ -61,20 +61,20 @@
     <div class="main-light">
       <div class="user-plofile">
         <%= link_to user_path(current_user), class: "user-nickname" do %>
-          <div class="nickname">
+          <div class="avatar-position">
             <% if current_user.avatar? %>
-             <img src="<%= current_user.avatar %>" width="50" height="50" class = dream-user-icon >
+             <img src="<%= current_user.avatar %>" width="50" height="50" class = user-icon >
             <% else %>
               <%= image_tag ("noavatar.png"), size: "50", class: "user-icon" %>
             <% end %>
             <%= current_user.nickname %>
           </div>
-          <div class="profile-text">　　　のプロフィール</div>
+          <div class="profile-text">のプロフィール</div>
         <% end %>
       </div>
 
-      <div class="friends">
-        <%= link_to 'friend sarch!', users_path %>
+      <div class="user-sarch">
+        <%= link_to 'friend sarch!', users_path, class: "sarch-text" %>
       </div>
       <div class="friends">
         <div class="friend-list">
@@ -83,7 +83,7 @@
         <div class="friend-list-main">
           <% @users.each do |user| %>
             <div>
-              <%= link_to "#" do %>
+              <%= link_to "#", class: "avatar-position" do %>
                 <% if user.following_by?(current_user) %>
                   <% if user.avatar? %>
                     <%= image_tag user.avatar.url, size: "50", class: "user-icon" %>
