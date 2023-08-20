@@ -8,10 +8,10 @@ class User < ApplicationRecord
   
   # フォローする
   has_many :active_friends, class_name: "Friend", foreign_key: :following_id
-  has_many :followings, through: :active_friendss, source: :follower
+  has_many :followings, through: :active_friends, source: :follower
   # フォローされる
   has_many :passive_friends, class_name: "Friend", foreign_key: :follower_id
-  has_many :followers, through: :passive_friendss, source: :following
+  has_many :followers, through: :passive_friends, source: :following
 
   def followed_by?(user)
     follower =  passive_friends.find_by(following_id: user.id)

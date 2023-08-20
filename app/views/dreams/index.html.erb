@@ -84,7 +84,7 @@
           <% @users.each do |user| %>
             <div>
               <%= link_to "#", class: "avatar-position" do %>
-                <% if user.following_by?(current_user) %>
+                <% if user.followed_by?(current_user) %>
                   <% if user.avatar? %>
                     <%= image_tag user.avatar.url, size: "50", class: "user-icon" %>
                   <% else %>
