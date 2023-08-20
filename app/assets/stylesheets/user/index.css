@@ -1,0 +1,43 @@
+.friends-sarch {
+  background-image: url('friend-background.png');
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 150px;
+}
+
+.friend-sarch-title {
+  text-align: center;
+  font-size: 5vh;
+  padding-top: 15px;
+}
+
+.friend-view-area {
+  background-color: #ffffffbd;
+  border: 4px #87CEFA solid;
+  width: 50%;
+  min-height: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.friend-sarch {
+  justify-content: center;
+  display: flex;
+}
+
+.follow-btn {
+  display: flex;
+  align-items: center;
+}
+
+.user_friends {
+  text-decoration: none;
+  margin: 5px 10px;
+  padding: 5px;
+  color:black;
+  font-weight: bold;
+  background-color: rgb(193, 193, 193);
+  border-radius: 5px;
+}

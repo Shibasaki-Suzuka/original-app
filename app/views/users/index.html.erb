@@ -1,40 +1,42 @@
 
-<div class="">
-<h3>friend sarch</h3>
-  <% @users.each do |user| %>
-    <div>
-      <% if current_user != user %>
-        <div>
-          <% if user.avatar? %>
-            <%= image_tag user.avatar.url, size: "50", class: "user-icon" %>
-          <% else %>
-            <%= image_tag ("noavatar.png"), size: "50", class: "user-icon" %>
-          <% end %>
-        </div>
-        <div>
-          <%= user.nickname %>
-        </div>
-        <div id="friend-btn<%= user.id %>">
-          <%= render partial: "friends/friend", locals: { user: user } %>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
-
-  <h3>follower</h3>
-  <% @users.each do |user| %>
-    <div>
-      <%= link_to "#" do %>
-        <% if user.following_by?(current_user) %>
-          <% if user.avatar? %>
-            <%= image_tag user.avatar.url, size: "50", class: "user-icon" %>
-          <% else %>
-            <%= image_tag ("noavatar.png"), size: "50", class: "user-icon" %>
-          <% end %>
-          <%= user.nickname %>
+<div class="friends-sarch">
+  <h2 class="friend-sarch-title">friend sarch</h2>
+  <div class="friend-view-area">
+    <% @users.each do |user| %>
+      <div class="friend-sarch">
+        <% if current_user != user %>
+          <div class="avatar-position">
+            <% if user.avatar? %>
+              <%= image_tag user.avatar.url, size: "50", class: "user-icon" %>
+            <% else %>
+              <%= image_tag ("noavatar.png"), size: "50", class: "user-icon" %>
+            <% end %>
+            <%= user.nickname %>
+          </div>
+          <div class="follow-btn" id="friend-btn<%= user.id %>">
+            <%= render partial: "friends/friend", locals: { user: user } %>
+          </div>
         <% end %>
-      <% end %>
-    </div>
-  <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <h2 class="friend-sarch-title">follower</h2>
+  <div class="friend-view-area">
+    <% @users.each do |user| %>
+      <div class="friend-sarch">
+        <%= link_to "#", class: "avatar-position" do %>
+          <% if user.following_by?(current_user) %>
+            <% if user.avatar? %>
+              <%= image_tag user.avatar.url, size: "50", class: "user-icon" %>
+            <% else %>
+              <%= image_tag ("noavatar.png"), size: "50", class: "user-icon" %>
+            <% end %>
+            <%= user.nickname %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div> 
 </div>
 
