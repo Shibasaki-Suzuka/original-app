@@ -37,6 +37,25 @@
         <% end %>
       </div>
     <% end %>
-  </div> 
+  </div>
+
+  <h2 class="friend-sarch-title">following</h2>
+  <div class="friend-view-area">
+    <% @users.each do |user| %>
+      <div class="friend-sarch">
+        <%= link_to "#", class: "avatar-position" do %>
+          <% if user.followed_by?(current_user) %>
+            <% if user.avatar? %>
+              <%= image_tag user.avatar.url, size: "50", class: "user-icon" %>
+            <% else %>
+              <%= image_tag ("noavatar.png"), size: "50", class: "user-icon" %>
+            <% end %>
+            <%= user.nickname %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
 </div>
 
