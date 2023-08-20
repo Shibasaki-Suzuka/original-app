@@ -171,6 +171,7 @@
 }
 
 .friend-list-main {
+  min-height: 100px;
   background-color: rgb(230, 247, 250);
   padding: 5px;
   border-radius: 20px
