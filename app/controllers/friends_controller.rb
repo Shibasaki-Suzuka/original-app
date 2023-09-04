@@ -1,5 +1,5 @@
 class FriendsController < ApplicationController
-  before_action :set_user
+  before_action :set_user, only: [:create, :destroy]
 
   def create
     follow = current_user.active_friends.new(follower_id: params[:user_id])
