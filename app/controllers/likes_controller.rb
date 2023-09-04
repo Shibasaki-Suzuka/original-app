@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  before_action :set_dream
+  before_action :set_dream, only: [:create, :destroy]
 
   def create
     like = current_user.likes.build(dream_id: params[:dream_id])
