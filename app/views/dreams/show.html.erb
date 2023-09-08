@@ -1,24 +1,19 @@
 <div class="registration-main">
   <div class='form-wrap'>
     <div class='form-header'>
-      <h1 class="form-header-text">
-        ゆめの詳細
-      </h1>
+      ゆめの詳細
     </div>
 
     <div class="dreams-contents">
       <div class="dream-contents">
-        <div class="dream-title">
-          ゆめの内容
-        </div>
+        <div class="dream-title">ゆめの内容</div>
         <div class="dream-text">
           <%= @dream.dream_list %>
         </div>
       </div>
+
       <div class="dream-contents">
-        <div class="dream-title">
-          金額
-        </div>
+        <div class="dream-title">金額</div>
         <div class="dream-text">
           <% if @dream.cost.present? %>
             <%= @dream.cost %>
@@ -27,10 +22,9 @@
           <% end %>
         </div>
       </div>
+
       <div class="dream-contents">
-        <div class="dream-title">
-          期限
-        </div>
+        <div class="dream-title">期限</div>
         <div class="dream-text">
           <% if @dream.due.present? %>
             <%= @dream.due %>
@@ -39,10 +33,9 @@
           <% end %>
         </div>
       </div>
+
       <div class="dream-contents">
-        <div class="dream-title">
-          メモ
-        </div>
+        <div class="dream-title">メモ</div>
         <div class="dream-text">
           <% if @dream.memo.present? %>
             <%= @dream.memo %>
@@ -56,26 +49,22 @@
     <%# 叶えたゆめのコメント表示 %>
     <% if @achieve.present? %>
       <div class="achieve-dreams-contents">
-        <div class="achieve-dream-contents">
-          <div class="achieve-dream-title">
-            達成日
-          </div>
+        <div class="dream-contents">
+          <div class="achieve-dream-title">達成日</div>
           <div class="dream-text">
             <%= @achieve.success_day %>
           </div>
         </div>
+
         <div class="dream-contents">
-          <div class="achieve-dream-title">
-            コメント
-          </div>
+          <div class="achieve-dream-title">コメント</div>
           <div class="dream-text">
             <%= @achieve.comment %>
           </div>
         </div>
+
         <div class="dream-contents">
-          <div class="achieve-dream-image">
-            想い出の写真
-          </div>
+          <div class="achieve-dream-image">想い出の写真</div>
           <div class="dream-text">
             <% if @achieve.image.attached? %>
               <%= image_tag @achieve.image.variant(resize: '450x450') %>
